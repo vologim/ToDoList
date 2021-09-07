@@ -1,6 +1,6 @@
-com\golovackii\misha\service\CaseServiceImpl.class
-com\golovackii\misha\dao\CaseDAO.class
 com\golovackii\misha\entity\Deal.class
+com\golovackii\misha\service\CaseServiceImpl.class
 com\golovackii\misha\service\CaseService.class
 com\golovackii\misha\controller\MyController.class
 com\golovackii\misha\dao\CaseDAOImpl.class
+com\golovackii\misha\dao\CaseDAO.class

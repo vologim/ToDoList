@@ -12,10 +12,19 @@
             
             <c:forEach var="element" items="${dealList}">
                 
+                <c:url var="deleteButton" value="/deleteCase">
+                    <c:param name="caseId" value="${element.id}"/>
+                </c:url>
+                
             <tr>
                 <td>
                     &#10148;
                     ${element.text}
+                    
+                </td>
+                <td>
+                    <input type="button" value="Delete"
+                           onclick="window.location.href='${deleteButton}'"/>
                 </td>
             </tr>
             

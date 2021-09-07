@@ -11,4 +11,6 @@ public interface CaseService {
 
     void save(Deal deal);
     
+    void delete(int id);
+    
 }

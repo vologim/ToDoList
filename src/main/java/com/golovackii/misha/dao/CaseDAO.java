@@ -9,5 +9,5 @@ public interface CaseDAO {
 
     void save(Deal deal);
     
-    
+    void delete(int id);
 }

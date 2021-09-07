@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.golovackii.misha.service.CaseService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -40,6 +41,14 @@ public class MyController {
     public String saveCase(@ModelAttribute("newCase") Deal deal){
         
         caseService.save(deal);
+        
+        return "redirect:/";
+    }
+    
+    @RequestMapping("/deleteCase")
+    public String deleteCase(@RequestParam("caseId") int id){
+        
+        caseService.delete(id);
         
         return "redirect:/";
     }
