@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface CaseDAO {
     List<Deal> getAllList();
+
+    void save(Deal deal);
     
     
 }

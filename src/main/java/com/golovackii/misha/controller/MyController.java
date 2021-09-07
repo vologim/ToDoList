@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.golovackii.misha.service.CaseService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 
 @Controller
 public class MyController {
@@ -16,12 +18,30 @@ public class MyController {
     private CaseService caseService;
     
     @RequestMapping("/")
-    public String showAllLost(Model model){
+    public String showAllCases(Model model){
         
         List<Deal> deals = caseService.getAllList();
         model.addAttribute("dealList", deals);
         
         return "show-to-do-list";
+    }
+    
+    @RequestMapping("/addNewCase")
+    public String addNewCase(Model model){
+        
+        Deal deal = new Deal();
+        
+        model.addAttribute("newCase", deal);
+        
+        return "add-new-case";
+    }
+    
+    @RequestMapping("/saveCase")
+    public String saveCase(@ModelAttribute("newCase") Deal deal){
+        
+        caseService.save(deal);
+        
+        return "redirect:/";
     }
     
 }

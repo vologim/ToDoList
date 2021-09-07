@@ -19,5 +19,11 @@ public class CaseServiceImpl implements CaseService{
     public List<Deal> getAllList() {
         return caseDAO.getAllList();
     }
+
+    @Override
+    @Transactional
+    public void save(Deal deal) {
+        caseDAO.save(deal);
+    }
     
 }

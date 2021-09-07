@@ -22,5 +22,11 @@ public class CaseDAOImpl implements CaseDAO{
         
         return deals;
     }
+
+    @Override
+    public void save(Deal deal) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(deal);
+    }
     
 }

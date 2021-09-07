@@ -6,8 +6,7 @@
     
     <body>
         <h2>To-do List</h2>
-        <br>
-        <br>
+        <br><br>
         
         <table>
             
@@ -24,6 +23,10 @@
             
             
         </table>
+        
+        <br>
+        <input type="button" value="Add new case"
+               onclick="window.location.href='addNewCase'"/>
         
     </body>
 </html>
