@@ -37,6 +37,13 @@ public class CaseDAOImpl implements CaseDAO{
         query.setParameter("dealId", id);
         query.executeUpdate();
     }
+
+    @Override
+    public Deal getDeal(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Deal deal = session.get(Deal.class, id);
+        return deal;
+    }
     
 }
 

@@ -8,6 +8,9 @@
         <br><br>
         
         <form:form action="saveCase" modelAttribute="newCase">
+            
+            <form:hidden path="id"/>
+            
             Write case: <form:input path="text"/>
             <br><br>
             This important deal?

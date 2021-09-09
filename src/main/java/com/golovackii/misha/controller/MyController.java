@@ -53,4 +53,13 @@ public class MyController {
         return "redirect:/";
     }
     
+    @RequestMapping("/changeCase")
+    public String changeCase(@RequestParam("caseId") int id, Model model){
+        
+        Deal deal = caseService.getDeal(id);
+        model.addAttribute("newCase", deal);
+        
+        return "add-new-case";
+    }
+    
 }

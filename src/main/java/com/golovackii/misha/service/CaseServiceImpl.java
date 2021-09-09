@@ -31,5 +31,11 @@ public class CaseServiceImpl implements CaseService{
     public void delete(int id) {
         caseDAO.delete(id);
     }
+
+    @Override
+    @Transactional
+    public Deal getDeal(int id) {
+        return caseDAO.getDeal(id);
+    }
     
 }
