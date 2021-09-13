@@ -2,6 +2,9 @@
 package com.golovackii.misha.dao;
 
 import com.golovackii.misha.entity.Deal;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,6 +23,9 @@ public class CaseDAOImpl implements CaseDAO{
         Session session = sessionFactory.getCurrentSession();
         
         List<Deal> deals = session.createQuery("from Deal", Deal.class).getResultList();
+        Comparator<Deal> comparator = ((o1, o2) -> 
+                    {return Integer.compare(o2.getImportance(), o1.getImportance());});
+        Collections.sort(deals, comparator);
         
         return deals;
     }

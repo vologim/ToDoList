@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "mytable")
-public class Deal {
+public class Deal{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -20,21 +20,21 @@ public class Deal {
     private String text;
     
     @Column(name = "importance")
-    private boolean importance;
+    private int importance;
 
     public Deal() {
     }
 
-    public Deal(String text, boolean importance) {
+    public Deal(String text, int importance) {
         this.text = text;
         this.importance = importance;
     }
 
-    public boolean isImportance() {
+    public int getImportance() {
         return importance;
     }
 
-    public void setImportance(boolean importance) {
+    public void setImportance(int importance) {
         this.importance = importance;
     }
     
@@ -53,6 +53,5 @@ public class Deal {
     public void setText(String text) {
         this.text = text;
     }
-    
-    
+
 }

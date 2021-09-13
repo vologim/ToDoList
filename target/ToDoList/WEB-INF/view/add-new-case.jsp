@@ -14,8 +14,8 @@
             Write case: <form:input path="text"/>
             <br><br>
             This important deal?
-            yes<form:radiobutton path="importance" value="true"/>
-            no<form:radiobutton path="importance" value="false"/>
+            yes<form:radiobutton path="importance" value="1"/>
+            no<form:radiobutton path="importance" value="0"/>
             <br><br>
             <input type="submit" value="OK"/>
         </form:form>
