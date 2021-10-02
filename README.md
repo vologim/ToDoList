@@ -1,4 +1,4 @@
-My little pet project implementing a to-do list
+My little project implementing a to-do list
 Used:
   - Spring MVC
   - Hibernate
